@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <title>DAVID_CYRIL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Cyril's personal and bot resource page">
+  <meta name="keywords" content="David Cyril, QR Code, Pair Code, GitHub, Telegram, WhatsApp, YouTube">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
     body {
       display: flex;
       flex-direction: column;
@@ -12,28 +16,27 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: black;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      font-family: 'Pacifico', cursive;
     }
 
     .btn {
-      --color: #e5f5f1;
-      --color2: rgb(0, 0, 0);
-      width: 200px;
-      padding: 0.8em 1.75em;
-      background-color: green;
-      border-radius: 6px;
-      border: .3px solid var(--color);
-      transition: .5s;
+      --color: #ffccd5;
+      --color2: #6c757d;
+      width: 220px;
+      padding: 1em 2em;
+      background-color: #ff9aa2;
+      border-radius: 12px;
+      border: 1px solid var(--color);
+      transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
       cursor: pointer;
       z-index: 1;
-      font-weight: 300;
-      font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      text-transform: uppercase;
-      color: var(--color);
-      margin-bottom: 24px;
+      font-size: 18px;
+      color: var(--color2);
+      margin-bottom: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .btn::after, .btn::before {
@@ -41,48 +44,45 @@
       display: block;
       height: 100%;
       width: 100%;
-      transform: skew(90deg) translate(-50%, -50%);
+      transform: skew(45deg) translate(-50%, -50%);
       position: absolute;
       inset: 50%;
-      left: 25%;
       z-index: -1;
-      transition: .5s ease-out;
+      transition: all 0.4s ease;
       background-color: var(--color);
     }
 
     .btn::before {
       top: -50%;
-      left: -25%;
-      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-    }
-
-    .btn:hover::before {
+      left: -50%;
       transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
     }
 
+    .btn:hover::before {
+      transform: skew(0deg) rotate(180deg) translate(-50%, -50%);
+    }
+
     .btn:hover::after {
-      transform: skew(45deg) translate(-50%, -50%);
+      transform: skew(0deg) translate(-50%, -50%);
     }
 
     .btn:hover {
-      color: var(--color2);
+      color: white;
     }
 
     .btn:active {
-      filter: brightness(.7);
-      transform: scale(.98);
+      filter: brightness(0.9);
+      transform: scale(0.97);
     }
   </style>
 </head>
 <body>
 
-  <button onclick="window.open(`/wasiqr`)" class="btn">QR Code</button>
-  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
-  <button onclick="window.open(`https://github.com/deeceexxx/Queen_Anita-V2`)" class="btn">Bot Repo</button>
-  <button onclick="window.open(`https://t.me/deecee_x`)" class="btn">Contact Me</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VaeRru3ADTOEKPCPom0L`)" class="btn">Wa Channel</button>
-  <button onclick="window.open(`https://www.youtube.com/@DavidCyril_TECH`)" class="btn">Youtube</button>
-  
+  <button onclick="window.open(`/wasiqr`)" class="btn" aria-label="Open QR Code">QR Code</button>
+  <button onclick="window.open(`/pair`)" class="btn" aria-label="Open Pair Code">Pair Code</button>
+  <button onclick="window.open(`https://github.com/Prince-luck/ZZZ-ban`)" class="btn" aria-label="View Bot Repository">Bot Repo</button>
+  <button onclick="window.open(`https://t.me/`)" class="btn" aria-label="Contact Me on Telegram">Contact Me</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029Vacs3IIIiRp0FeDDcJ1G`)" class="btn" aria-label="Visit WhatsApp Channel">Wa Channel</button>
 
 </body>
-</html> 
+</html>
